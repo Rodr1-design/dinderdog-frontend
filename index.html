@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinderdog - Find Your Pup's Perfect Match!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ffcc66;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #444;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff9933;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        .cta-button:hover {
+            background-color: #e68a00;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #ff9933;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #e68a00;
+        }
+        .match-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .match-container img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .match-container button {
+            width: 48%;
+            margin: 1%;
+            padding: 10px;
+            background-color: #ff9933;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .match-container button:hover {
+            background-color: #e68a00;
+        }
+        .chat-box {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .chat-box textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .chat-box button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ff9933;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .chat-box button:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dinderdog</h1>
+        <p>Find your pup's perfect match!</p>
+    </header>
+
+    <section>
+        <h2>Welcome to Dinderdog!</h2>
+        <p>Dinderdog is the ultimate dog-dating platform, connecting furry friends for companionship, playdates, and more. Whether you're looking for a playful puppy pal or a calm canine companion, we've got you covered!</p>
+        <a href="#signup" class="cta-button">Get Started</a>
+    </section>
+
+    <section id="signup">
+        <h2>Create Your Dog's Profile</h2>
+        <form action="#" method="POST">
+            <label for="dog-name">Dog's Name:</label>
+            <input type="text" id="dog-name" name="dog-name" required>
+
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="owner-email">Owner's Email:</label>
+            <input type="email" id="owner-email" name="owner-email" required>
+
+            <label for="location">Location (City):</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="preferences">Preferred Match Traits:</label>
+            <select id="preferences" name="preferences">
+                <option value="playful">Playful</option>
+                <option value="calm">Calm</option>
+                <option value="active">Active</option>
+                <option value="friendly">Friendly</option>
+            </select>
+
+            <label for="photos">Upload Photos (Up to 3):</label>
+            <input type="file" id="photos" name="photos" accept="image/*" multiple>
+
+            <button type="submit">Submit Profile</button>
+        </form>
+    </section>
+
+    <section id="matching">
+        <h2>Find a Match!</h2>
+        <div class="match-container">
+            <img src="https://via.placeholder.com/300" alt="Dog Profile">
+            <p><strong>Name:</strong> Bella</p>
+            <p><strong>Breed:</strong> Golden Retriever</p>
+            <p><strong>Age:</strong> 3 years</p>
+            <p><strong>Location:</strong> Lisbon</p>
+            <p><strong>Traits:</strong> Playful, Friendly</p>
+            <button onclick="alert('You liked Bella! Chat started.')">Like</button>
+            <button onclick="alert('You passed on Bella.')">Pass</button>
+        </div>
+    </section>
+
+    <section id="chat">
+        <h2>Chat</h2>
+        <div class="chat-box">
+            <textarea placeholder="Type your message here..."></textarea>
+            <button>Send</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dinderdog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
